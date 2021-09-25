@@ -42,6 +42,7 @@ class App extends Component {
 
     try {
       await http.delete(config.apiEndpoint + "/" + post.id);
+      //throw new Error("");
     } catch (ex) {
       if (ex.response && ex.response.status === 404)
         alert("This post has already been deleted.");
